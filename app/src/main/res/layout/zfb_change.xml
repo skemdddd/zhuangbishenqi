@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:background="#f5f5f9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:background="#4d90ec"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentEnd="true">
+        <View
+            android:paddingLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#74a8ec"
+            android:id="@+id/view"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/image_back"/>
+        <ImageButton
+            android:padding="18dp"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/red_alipay_red_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/image_back"/>
+
+
+        <TextView
+            android:textColor="@color/colorWhiter"
+            android:textSize="14sp"
+            android:text="明细"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_marginStart="14dp"
+            android:textColor="@color/colorWhiter"
+            android:textSize="17sp"
+            android:text="余额"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_alignTop="@+id/view"
+            android:layout_toEndOf="@+id/view"/>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:background="#4d90ec"
+            android:layout_width="match_parent"
+            android:layout_height="177dp">
+            <TextView
+                android:textColor="#d2e3f9"
+                android:textSize="15sp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="38dp"
+                android:text="余额账户(元)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_marginTop="38dp"
+                android:src="@drawable/alipay_problem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:textColor="@color/colorWhiter"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="25dp"
+                android:textSize="59sp"
+                tools:text="0.01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:background="@color/colorWhiter"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:layout_marginStart="17sp"
+                android:src="@drawable/alipay_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_marginStart="52dp"
+                android:textSize="16sp"
+                android:textColor="#222222"
+                android:text="充值"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+            />
+
+            <ImageView
+                android:layout_marginEnd="17dp"
+                android:src="@drawable/enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee"
+         />
+        <RelativeLayout
+            android:background="@color/colorWhiter"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:layout_marginStart="17sp"
+                android:src="@drawable/alipay_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_marginStart="52dp"
+                android:textSize="16sp"
+                android:textColor="#222222"
+                android:text="提现"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:layout_marginEnd="17dp"
+                android:src="@drawable/enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="22.5dp"
+            android:background="#F5F5F9"
+            />
+        <RelativeLayout
+            android:background="@color/colorWhiter"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:layout_marginStart="17sp"
+                android:src="@drawable/set_points_treasure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_marginStart="52dp"
+                android:textSize="16sp"
+                android:textColor="#222222"
+                android:text="集分宝"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:layout_marginEnd="17dp"
+                android:src="@drawable/enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

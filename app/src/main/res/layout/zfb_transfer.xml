@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:background="#eaeaea"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:baselineAligned="false"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/colorLight_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:padding="10dp"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/ic_qqhb_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/img_break"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:textColor="@color/colorWhiter"
+            android:textSize="18sp"
+            android:text="支付宝转账"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/img_break"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout5">
+
+        <com.sevenheaven.segmentcontrol.SegmentControl
+            android:id="@+id/segment_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="18sp"
+            app:selectedColor="#32ADFF"
+            app:normalColor="#FFFFFF"
+            app:cornerRadius="5dp"
+            app:separatorWidth="1dp"
+            app:boundWidth="1dp"
+            app:texts="转入|转出"
+            app:verticalGap="10dp"
+            app:horizonGap="10dp">
+        </com.sevenheaven.segmentcontrol.SegmentControl>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LL_transaction_object"
+        android:background="@color/colorWhiter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="交易对象"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:gravity="end"
+            android:ellipsize="none"
+            android:maxLines="2"
+            android:scrollHorizontally="false"
+            android:text="@string/name"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_name"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.98"/>
+
+        <ImageView
+            android:layout_margin="10dp"
+            tools:src="@drawable/img_10013"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/img_head"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/RL_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:maxLength="20"
+            android:padding="10dp"
+            android:hint="对方支付宝账号（邮箱/手机）"
+            android:layout_marginTop="1dp"
+            android:background="@color/colorWhiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_QQ"/>
+
+        <ImageButton
+            android:id="@+id/imgbtn_randomPhone"
+            android:background="@color/transparent_background"
+            android:src="@drawable/ic_random"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="11dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/RL_transfer_status"
+        android:layout_marginTop="1dp"
+        android:clickable="true"
+        android:background="@color/colorWhiter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:inputType="numberDecimal"
+            android:maxLength="15"
+            android:padding="10dp"
+            android:hint="转出金额（元）"
+            android:layout_marginTop="1dp"
+            android:background="@color/colorWhiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_transfer_amount"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:maxLength="15"
+            android:padding="10dp"
+            android:hint="理由"
+            android:layout_marginTop="1dp"
+            android:background="@color/colorWhiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_reason"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/RL_detail"
+            android:clickable="true"
+            android:background="@color/colorWhiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:text="付款明细"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+
+                android:id="@+id/tv_detailmony"
+                android:text="余额"
+                android:layout_marginTop="10dp"
+                android:textColor="#515151"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"/>
+            <ImageView
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL_transfer_time"
+            android:layout_marginTop="1dp"
+            android:clickable="true"
+            android:background="@color/colorWhiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:text="创建时间"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_transferTime"
+                tools:text="未收钱"
+                android:layout_marginTop="10dp"
+                android:textColor="#515151"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"/>
+            <ImageView
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/enter"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/RL_state"
+            android:layout_marginTop="1dp"
+            android:clickable="true"
+            android:background="@color/colorWhiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:text="交易状态"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_state"
+                android:text="处理中"
+                android:layout_marginTop="10dp"
+                android:textColor="#515151"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"/>
+            <ImageView
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/enter"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <Button
+            android:enabled="false"
+            android:id="@+id/btn_ture"
+            android:textSize="18sp"
+            android:layout_margin="20dp"
+            android:background="@drawable/button"
+            android:text="生成预览"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

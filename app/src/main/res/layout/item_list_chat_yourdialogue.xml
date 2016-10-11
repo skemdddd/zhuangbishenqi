@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <TextView
+        android:textColor="@color/colorWhiter"
+        tools:visibility="visible"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:background="@drawable/item_time"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:id="@id/tv_time"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:text="@string/add_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <RelativeLayout
+        android:layout_marginTop="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+            <ImageView
+                android:layout_gravity="top"
+                android:layout_marginStart="6dp"
+                tools:src="@drawable/img_10023"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:id="@+id/img_myheard"/>
+            <TextView
+
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginStart="4dp"
+                android:maxEms="13"
+                android:id="@+id/tv_myspeak"
+
+                android:background="@drawable/acp1"
+                tools:text="@string/add_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_marginStart="10dp"
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                tools:text="@string/add_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_timewvoice"
+                />
+            <ImageView
+                android:layout_marginStart="10dp"
+                android:id="@+id/imag_red"
+                android:src="@drawable/redpoint"
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+ </RelativeLayout>
+
+</LinearLayout>

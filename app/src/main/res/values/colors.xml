@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorWhiter">#FFFFFF</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorLight_blue">#4ed2d8</color>
+    <color name="colorGray">#f4f5f9</color>
+    <color name="colorBack_yellow">#f4e6b2</color>
+    <color name="colorNum_Gray">#9a9a9a</color>
+    <color name="colorWXbg_Gray">#F5F5F5</color>
+    <color name="colorLavender">#4c6fac</color>
+    <color name="SystemBarTint">#ab3e37</color>
+    <color name="zfb_textx">#00a3e6</color>
+    <color name="zfb_num">#da654f</color>
+    <color name="qq_redbg">#d13f4b</color>
+    <color name="qq_num">#fedd71</color>
+    <color name="colorBack_Gray">#8e8f91</color>
+    <color name="fenduan">#728ca7</color>
+
+    <!--透明-->
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorblackTransparent">#88000000</color>
+    <color name="transparent_background">#00000000</color>
+
+
+</resources>

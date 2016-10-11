@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <TextView
+        android:textColor="@color/colorWhiter"
+        tools:visibility="visible"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:background="@drawable/item_time"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:id="@id/tv_time"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        tools:text="@string/add_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <RelativeLayout
+        android:layout_marginTop="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginEnd="6dp"
+            android:layout_gravity="top"
+            tools:src="@drawable/img_10023"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:id="@+id/img_mypheard"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"/>
+
+        <LinearLayout
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/bg_hongbao_a"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/img_mypheard">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/ic_hongbao_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/icon"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="130dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:singleLine="true"
+                    android:id="@+id/tv_redinformation"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorWhiter"
+                    android:textSize="13sp"
+                    android:text="@string/wx_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                 <TextView
+                     android:singleLine="true"
+                     android:id="@+id/tv_money"
+                     android:layout_marginTop="6dp"
+                     android:textSize="13sp"
+                     android:text="查看红包   "
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textColor="@color/colorWhiter" >
+                 </TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/tv_wechatpay"
+                    android:textColor="@color/colorNum_Gray"
+                    android:textSize="12sp"
+                    android:text="@string/wechatpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_nameredbag"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/item_time"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+     <ImageView
+         android:padding="5dp"
+         android:src="@drawable/systemmessages_hongbaoicon"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_nameredbag"
+            android:textColor="@color/colorWhiter"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:text="领取了你的"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:textColor="#fa9932"
+            android:paddingEnd="5dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:text="红包"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

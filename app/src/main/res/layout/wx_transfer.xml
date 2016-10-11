@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:background="#eaeaea"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:baselineAligned="false"
+              android:orientation="vertical">
+        <RelativeLayout
+            android:background="@color/colorLight_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <ImageButton
+                    android:padding="10dp"
+                    android:background="@color/colorTransparent"
+                    android:src="@drawable/ic_qqhb_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/img_break"/>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:textColor="@color/colorWhiter"
+                    android:textSize="18sp"
+                    android:text="支付宝转账"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/img_break"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout5">
+
+                <com.sevenheaven.segmentcontrol.SegmentControl
+                    android:id="@+id/segment_control"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:textSize="18sp"
+                    app:selectedColor="#32ADFF"
+                    app:normalColor="#FFFFFF"
+                    app:cornerRadius="5dp"
+                    app:separatorWidth="1dp"
+                    app:boundWidth="1dp"
+                    app:texts="别人转给我|我转给别人"
+                    app:verticalGap="10dp"
+                    app:horizonGap="10dp">
+                </com.sevenheaven.segmentcontrol.SegmentControl>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL_transfer_status"
+            android:layout_marginTop="1dp"
+            android:clickable="true"
+            android:background="@color/colorWhiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:text="转钱状态"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_moneyTime"
+                    android:text="未收钱"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#515151"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"/>
+                <ImageView
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/enter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <EditText
+                    android:layout_marginTop="1dp"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp"
+                    android:hint="转账金额"
+                    android:background="@color/colorWhiter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/edi_transfer"/>
+
+                <RelativeLayout
+                    android:id="@+id/RL_name"
+                    tools:visibility="visible"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                        <EditText
+                            android:maxLength="15"
+                            android:padding="10dp"
+                            android:hint="对方昵称"
+                            android:layout_marginTop="1dp"
+                            android:background="@color/colorWhiter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/editText_otherName"/>
+
+                        <ImageButton
+                            android:id="@+id/imgbtn_randomName"
+                            android:background="@color/transparent_background"
+                            android:src="@drawable/ic_random"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="11dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/RL_money_time"
+                    android:clickable="true"
+                    android:background="@color/colorWhiter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18sp"
+                            android:layout_margin="10dp"
+                            android:text="收钱时间"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+
+                            android:id="@+id/tv_money_time"
+                            android:text="未收钱"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#515151"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="30dp"/>
+                        <ImageView
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/enter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/RL_transfer_time"
+                    android:layout_marginTop="1dp"
+                    android:clickable="true"
+                    android:background="@color/colorWhiter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18sp"
+                            android:layout_margin="10dp"
+                            android:text="转账时间"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tv_transferTime"
+                            android:text="未收钱"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#515151"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="30dp"/>
+                        <ImageView
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/enter"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:enabled="false"
+            android:id="@+id/btn_ture"
+            android:textSize="18sp"
+            android:layout_margin="20dp"
+            android:background="@drawable/button"
+            android:text="生成预览"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.administrator.zhuangbishenqi">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.Main_Activty"
+                  android:screenOrientation="portrait"
+            >
+
+        </activity>
+        <activity
+            android:name=".ui.RedEnvelopri"
+            android:theme="@style/Transparent">
+        </activity>
+        <activity android:name=".ui.WxRedInformation">
+
+        </activity>
+        <activity android:name=".ui.WxZfbChangeNameHeard">
+
+        </activity>
+        <activity
+            android:theme="@style/wx"
+            android:name=".ui.WxRedBag">
+
+        </activity>
+        <activity android:name=".ui.ZfbRedBag">
+
+        </activity>
+        <activity android:name=".ui.ZfbRedBagInformation">
+
+        </activity>
+        <activity android:name=".ui.QqRedInformation">
+
+        </activity>
+        <activity android:name=".ui.QqRedBag">
+
+        </activity>
+        <activity android:name=".ui.WxChat">
+
+        </activity>
+        <activity
+            android:name=".ui.AddTextMessage"
+            android:windowSoftInputMode="adjustPan"
+            >
+
+
+        </activity>
+        <activity android:name=".ui.WxSetchat">
+
+        </activity>
+        <activity android:name=".ui.WxSetChatChange">
+
+        </activity>
+        <activity android:name=".ui.WxSetChatYourChange">
+
+        </activity>
+        <activity android:name=".ui.WxChatPreview">
+
+        </activity>
+        <activity android:name=".ui.WxchatAddPictures">
+
+        </activity>
+        <activity android:name=".ui.WxchatAddHongBao">
+
+        </activity>
+        <activity android:name=".ui.WxChatAddTransfer">
+
+        </activity>
+         <activity android:name=".ui.WxChatAddVoice">
+
+         </activity>
+        <activity android:name=".ui.OtherScreenshots"
+                  android:theme="@style/Transparent"
+            >
+
+        </activity>
+        <activity android:name=".ui.WxBalance">
+
+        </activity>
+        <activity android:name=".ui.WxBalanceShow">
+
+        </activity>
+        <activity android:name=".ui.ZfbBalance">
+
+        </activity>
+        <activity android:name=".ui.ZfbBalanceShow">
+
+        </activity>
+        <activity android:name=".ui.WxWithdrawal">
+
+        </activity>
+        <activity android:name=".ui.WxWithdrawalShow">
+
+        </activity>
+        <activity android:name=".ui.WxTransfer">
+
+        </activity>
+        <activity
+            android:theme="@style/Transparent"
+            android:name=".ui.TransferAccounts">
+
+        </activity>
+        <activity android:name=".ui.WxTransferAccointsShow">
+
+        </activity>
+        <activity android:name=".ui.ZfbTransfer">
+
+        </activity>
+        <activity android:name=".ui.ZfbTransferShow">
+
+        </activity>
+        <activity android:name=".ui.QqTransfer">
+
+        </activity>
+        <activity android:name=".ui.QqTransferShow">
+
+        </activity>
+        <activity android:name=".ui.StarActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:value="YOUR_APP_KEY" android:name="UMENG_APPKEY">
+            <meta-data
+                android:name="UMENG_CHANNEL"
+                android:value="${UMENG_CHANNEL_VALUE}" />
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <com.example.administrator.zhuangbishenqi.widget.QNumberPicker
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:id="@+id/change_banck"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:background="@color/colorWhiter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:background="#11b8f5"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentEnd="true">
+
+        <ImageButton
+            android:padding="15.5dp"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/ic_qqhb_back_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/image_back"/>
+
+
+        <TextView
+            android:textColor="@color/colorWhiter"
+            android:textSize="17sp"
+            android:text="转账记录"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/colorWhiter"
+            android:textSize="20sp"
+            android:text="转账详情"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_marginTop="12.5dp"
+            android:textSize="17sp"
+            android:textColor="@color/colorWhiter"
+            android:text="返回"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentStart="true"/>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/wechat_transfer_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:textSize="17sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="19dp"
+            android:layout_gravity="center"
+            android:text="收款成功"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/tv_mony"
+                android:layout_marginTop="14dp"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                tools:text="50.00元"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <TextView
+            android:textSize="15sp"
+            android:textColor="#626263"
+            android:layout_gravity="center"
+            android:layout_marginTop="22dp"
+            android:text="已转入你的余额"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+
+            android:id="@+id/LL_btn"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:textColor="@color/colorWhiter"
+                android:background="@drawable/btn_blue"
+                android:textSize="17sp"
+                android:text="查看余额"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="13.5dp"
+                android:layout_marginEnd="13.5dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"/>
+            <Button
+                android:background="@drawable/rbtn_style"
+                android:textSize="17sp"
+                android:textColor="#02abe9"
+                android:text="提现到银行卡"
+                android:layout_marginTop="14.5dp"
+                android:layout_marginStart="13.5dp"
+                android:layout_marginEnd="13.5dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:background="@color/colorGray"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/colorLight_blue"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <ImageButton
+            android:id="@+id/ibtn_break"
+            android:layout_margin="10dp"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/ic_qqhb_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/LL_change"
+        android:background="@color/colorWhiter"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.98"
+            android:textSize="18sp"
+            android:text="@string/chat_messages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/iv_my_head_pic"
+            android:layout_margin="10dp"
+            tools:src="@drawable/img_10004"
+            android:layout_width="55dp"
+            android:layout_height="55dp"/>
+        <ImageView
+            android:id="@+id/iv_you_head_pic"
+            android:layout_margin="10dp"
+            tools:src="@drawable/img_10005"
+            android:layout_width="55dp"
+            android:layout_height="55dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_add"
+            android:textColor="@color/colorWhiter"
+            android:textSize="18sp"
+            android:text="@string/addspeak"
+            android:layout_margin="10dp"
+            android:background="@drawable/button"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_wx_make_preview"
+            android:textColor="@color/colorWhiter"
+            android:textSize="18sp"
+            android:text="@string/make_preview"
+            android:layout_margin="10dp"
+            android:background="@drawable/button"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

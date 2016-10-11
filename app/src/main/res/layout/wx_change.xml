@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:background="@color/colorWhiter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:background="#383a3f"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentEnd="true">
+        <View
+            android:paddingLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#2e2e31"
+            android:id="@+id/view"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/image_back"/>
+        <ImageButton
+            android:padding="18dp"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/red_alipay_red_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/image_back"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/view">
+            <TextView
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorWhiter"
+                android:textSize="17sp"
+                android:layout_marginStart="6dp"
+                android:text="@string/loose_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:layout_marginBottom="2dp"
+                android:textColor="#9c9da2"
+                android:textSize="13sp"
+                android:layout_marginStart="6dp"
+                android:text="@string/wx_secure_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/view"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#2e2e31"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="80dp"/>
+        <TextView
+            android:textColor="@color/colorWhiter"
+            android:textSize="14sp"
+            android:text="@string/change_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="17dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:id="@+id/linearLayout4">
+        <LinearLayout
+            tools:visibility="visible"
+            android:id="@+id/LL_type"
+            android:visibility="gone"
+            android:background="#ed8c39"
+            android:layout_width="match_parent"
+            android:layout_height="42dp">
+            <TextView
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/colorWhiter"
+                android:text="提现收费规则"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/amg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text="我的零钱"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_money"
+            android:textSize="32dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            tools:text="￥200.00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:textColor="@color/colorWhiter"
+            android:text="充值"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"/>
+        <Button
+            android:textColor="@color/colorPrimaryDark"
+            android:text="提现"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/btn_pressed"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"/>
+        <TextView
+            android:layout_marginTop="19dp"
+            android:drawablePadding="6dp"
+            android:textColor="#385280"
+            android:textSize="14dp"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_lingqian_licaitong"
+            android:text="零钱理财，让零钱安稳赚收益"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+
+            android:textColor="#6081bf"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:text="常见问题"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textColor="#a6a6a6"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:text="本服务由财付通提供底层技术支持"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

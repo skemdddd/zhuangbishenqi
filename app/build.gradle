@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    aaptOptions{
+        cruncherEnabled = false
+        useNewCruncher = false
+
+    }
+
+
+    defaultConfig {
+        applicationId "com.example.administrator.zhuangbishenqi"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+android {
+    productFlavors {
+        oppo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo"]
+        }
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+        }
+        qh360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qh360"]
+        }
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+        }
+        yingyongbao{
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
+        }
+        huaweishichang{
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "huaweishichang"]
+        }
+    }
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile'com.android.support:design:23.4.0'
+    compile 'com.android.support:cardview-v7:23.0.+'
+    compile 'com.7heaven.widgets:segmentcontrol:1.16'
+
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+}
