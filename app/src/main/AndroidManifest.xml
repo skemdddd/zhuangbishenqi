@@ -134,7 +134,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <meta-data android:value="YOUR_APP_KEY" android:name="UMENG_APPKEY">
+        <meta-data android:value="57f84a22e0f55ab552003750" android:name="截图神器">
             <meta-data
                 android:name="UMENG_CHANNEL"
                 android:value="${UMENG_CHANNEL_VALUE}" />

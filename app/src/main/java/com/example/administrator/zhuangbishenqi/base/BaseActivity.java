@@ -2,11 +2,10 @@ package com.example.administrator.zhuangbishenqi.base;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
+
 
 import com.example.administrator.zhuangbishenqi.utils.AppManager;
 import com.orhanobut.logger.Logger;

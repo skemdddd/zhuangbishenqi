@@ -375,9 +375,9 @@ public class WxChatAdapter extends RecyclerView.Adapter <WxChatAdapter.ViewHolde
                     holder.tv_timewvoice.setText(mDatas.get(position).get("redinformation")+"\"");
                     Bitmap mybit = BitmapFactory.decodeFile(WxChat.path + "myHead.jpg");
                     if(mybit==null){
-                        name.setImag(holder.image_myphead,"img_10005");
+                        name.setImag(holder.img_myheard,"img_10005");
                     }else{
-                        holder.image_myphead.setImageBitmap(mybit);
+                        holder.img_myheard.setImageBitmap(mybit);
                     }
                     if(mDatas.get(position).get("typered").equals("1")){
                         holder.imag_red.setVisibility(VISIBLE);
@@ -393,9 +393,9 @@ public class WxChatAdapter extends RecyclerView.Adapter <WxChatAdapter.ViewHolde
                     holder.tv_time.setText(mDatas.get(position).get("time"));
                     Bitmap mybit = BitmapFactory.decodeFile(WxChat.path + "yourHead.jpg");
                     if(mybit==null){
-                        name.setImag(holder.image_myphead,"img_10025");
+                        name.setImag(holder.img_myheard,"img_10025");
                     }else{
-                        holder.image_myphead.setImageBitmap(mybit);
+                        holder.img_myheard.setImageBitmap(mybit);
                     }
                     Drawable tv_map=mContext.getResources().getDrawable(R.drawable.chatfrom_voice_playing_f3);
                     tv_map.setBounds(0, 0, tv_map.getMinimumWidth(), tv_map.getMinimumHeight());
@@ -414,9 +414,9 @@ public class WxChatAdapter extends RecyclerView.Adapter <WxChatAdapter.ViewHolde
                     holder.tv_timewvoice.setText(mDatas.get(position).get("redinformation")+"\"");
                     Bitmap mybit = BitmapFactory.decodeFile(WxChat.path + "yourHead.jpg");
                     if(mybit==null){
-                        name.setImag(holder.image_myphead,"img_10025");
+                        name.setImag(holder.img_myheard,"img_10025");
                     }else{
-                        holder.image_myphead.setImageBitmap(mybit);
+                        holder.img_myheard.setImageBitmap(mybit);
                     }
                     if(mDatas.get(position).get("typered").equals("1")){
                         holder.imag_red.setVisibility(VISIBLE);
