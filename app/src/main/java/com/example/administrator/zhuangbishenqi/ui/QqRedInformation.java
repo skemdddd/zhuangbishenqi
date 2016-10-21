@@ -24,6 +24,8 @@ import com.example.administrator.zhuangbishenqi.base.BaseActivity;
 import com.example.administrator.zhuangbishenqi.entity.MyBitmapStore;
 import com.example.administrator.zhuangbishenqi.entity.Name;
 import com.example.administrator.zhuangbishenqi.widget.DateTimePickerDialog;
+import com.mediav.ads.sdk.adcore.Mvad;
+
 import java.text.SimpleDateFormat;
 
 
@@ -57,6 +59,8 @@ public class QqRedInformation  extends BaseActivity implements View.OnTouchListe
         SimpleDateFormat sDateFormat = new SimpleDateFormat("HH:mm:ss");
         String date = sDateFormat.format(new java.util.Date());
         tv_time.setText(date);
+        final String adSpaceid = "aFub09x2i4";
+        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
 
     }
 

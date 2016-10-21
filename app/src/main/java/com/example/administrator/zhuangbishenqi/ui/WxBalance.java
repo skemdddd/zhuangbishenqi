@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.administrator.zhuangbishenqi.R;
 import com.example.administrator.zhuangbishenqi.base.BaseActivity;
 import com.example.administrator.zhuangbishenqi.widget.SwitchView;
+import com.mediav.ads.sdk.adcore.Mvad;
 import com.orhanobut.logger.Logger;
 
 /**
@@ -39,6 +40,8 @@ public class WxBalance extends BaseActivity implements SwitchView.OnStateChanged
         btn_make_preview.setOnClickListener(this);
         img_break.setOnClickListener(this);
         viewSwitch.setOnStateChangedListener(this);
+        final String adSpaceid = "aFub09x2i4";
+        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
 
     }
 

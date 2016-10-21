@@ -16,6 +16,7 @@ import com.example.administrator.zhuangbishenqi.R;
 import com.example.administrator.zhuangbishenqi.base.BaseActivity;
 import com.example.administrator.zhuangbishenqi.entity.Name;
 import com.example.administrator.zhuangbishenqi.widget.AccointsTimePivkerDialog;
+import com.mediav.ads.sdk.adcore.Mvad;
 import com.sevenheaven.segmentcontrol.SegmentControl;
 
 import java.text.SimpleDateFormat;
@@ -67,7 +68,8 @@ public class WxTransfer extends BaseActivity implements View.OnTouchListener,Tex
         editText_otherName.addTextChangedListener(this);
         edi_transfer.addTextChangedListener(this);
 
-
+        final String adSpaceid = "aFub09x2i4";
+        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
         mSegmentControl.setOnSegmentControlClickListener(new SegmentControl.OnSegmentControlClickListener() {
             @Override
             public void onSegmentControlClick(int index) {

@@ -16,6 +16,7 @@ import com.example.administrator.zhuangbishenqi.R;
 import com.example.administrator.zhuangbishenqi.base.BaseActivity;
 import com.example.administrator.zhuangbishenqi.widget.BanckDialog;
 import com.example.administrator.zhuangbishenqi.widget.SwitchView;
+import com.mediav.ads.sdk.adcore.Mvad;
 import com.orhanobut.logger.Logger;
 
 /**
@@ -54,6 +55,8 @@ public class WxWithdrawal extends BaseActivity implements View.OnTouchListener,S
 
         cadId.addTextChangedListener(this);
         edt_money.addTextChangedListener(this);
+        final String adSpaceid = "aFub09x2i4";
+        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
 
     }
 

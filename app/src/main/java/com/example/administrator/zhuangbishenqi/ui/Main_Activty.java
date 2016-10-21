@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 
 import com.example.administrator.zhuangbishenqi.R;
 import com.example.administrator.zhuangbishenqi.base.BaseActivity;
+import com.mediav.ads.sdk.adcore.Mvad;
+import com.mediav.ads.sdk.interfaces.IMvBannerAd;
 import com.orhanobut.logger.Logger;
 
 import java.io.File;
@@ -26,6 +29,8 @@ public class Main_Activty  extends BaseActivity{
     ImageButton btn_artifact_transfer_accounts;
     ImageButton btn_artifact_star;
     ImageButton btn_artifact_kuso;
+    private IMvBannerAd bannerad = null;
+    private RelativeLayout adContainer = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,9 @@ public class Main_Activty  extends BaseActivity{
         btn_artifact_transfer_accounts.setOnClickListener(this);
         btn_artifact_star.setOnClickListener(this);
         btn_delete.setOnClickListener(this);
+        final String adSpaceid = "aFub09x2i4";
+        bannerad = Mvad.showBanner(adContainer, Main_Activty.this, adSpaceid, false);
+        bannerad.showAds(this);
     }
 
     @Override
@@ -106,6 +114,7 @@ public class Main_Activty  extends BaseActivity{
         btn_artifact_star= (ImageButton) findViewById(R.id.btn_artifact_star);
         btn_artifact_kuso= (ImageButton) findViewById(R.id.btn_artifact_kuso);
         btn_delete= (ImageButton) findViewById(R.id.btn_delete);
+        adContainer= (RelativeLayout) findViewById(R.id.banner_adcontainer);
 
     }
 }

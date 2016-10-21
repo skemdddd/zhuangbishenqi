@@ -20,21 +20,25 @@ public class StarActivity extends Activity {
         super.onCreate(savedInstanceState);
         final View view = View.inflate(this, R.layout.staractivity, null);
         setContentView(view);
-
+//
         //渐变展示启动屏
         AlphaAnimation aa = new AlphaAnimation(0.3f,1.0f);
-        aa.setDuration(2000);
+        aa.setDuration(3000);
         view.startAnimation(aa);
         aa.setAnimationListener(new Animation.AnimationListener()
         {
             @Override
             public void onAnimationEnd(Animation arg0) {
+
                 redirectTo();
+
             }
             @Override
             public void onAnimationRepeat(Animation animation) {}
             @Override
-            public void onAnimationStart(Animation animation) {}
+            public void onAnimationStart(Animation animation) {
+
+            }
 
         });
 

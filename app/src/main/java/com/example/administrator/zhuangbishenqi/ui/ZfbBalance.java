@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.administrator.zhuangbishenqi.R;
+import com.mediav.ads.sdk.adcore.Mvad;
 
 /**
  * Created by Administrator on 2016/9/8.
@@ -32,6 +33,8 @@ public class ZfbBalance extends WxBalance {
         tv_title.setText(intent.getStringExtra("title"));
         btn_make_preview.setOnClickListener(this);
         img_break.setOnClickListener(this);
+        final String adSpaceid = "aFub09x2i4";
+        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
 
     }
 

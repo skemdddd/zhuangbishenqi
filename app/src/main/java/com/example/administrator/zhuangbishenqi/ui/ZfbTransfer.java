@@ -79,7 +79,6 @@ public class ZfbTransfer extends BaseActivity implements  View.OnTouchListener,T
 
         editText_QQ.addTextChangedListener(this);
         edt_transfer_amount.addTextChangedListener(this);
-
         mSegmentControl.setOnSegmentControlClickListener(new SegmentControl.OnSegmentControlClickListener() {
             @Override
             public void onSegmentControlClick(int index) {

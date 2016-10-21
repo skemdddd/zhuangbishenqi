@@ -2,7 +2,6 @@ package com.example.administrator.zhuangbishenqi.ui;
 
 
 import android.content.Intent;
-
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -18,11 +17,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.example.administrator.zhuangbishenqi.R;
 import com.example.administrator.zhuangbishenqi.base.BaseActivity;
 import com.example.administrator.zhuangbishenqi.entity.MyBitmapStore;
 import com.example.administrator.zhuangbishenqi.entity.Name;
-
+import com.mediav.ads.sdk.adcore.Mvad;
 
 
 /**
@@ -50,7 +50,8 @@ public class WxRedInformation extends BaseActivity implements View.OnTouchListen
         initEditText();
         name =new Name();
         name.changeImgName(tv_name,img_head);
-
+        final String adSpaceid = "aFub09x2i4";
+        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
     }
 
     @Override

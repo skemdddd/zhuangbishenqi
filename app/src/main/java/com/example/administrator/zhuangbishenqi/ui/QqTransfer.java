@@ -12,7 +12,10 @@ import android.widget.RelativeLayout;
 
 import com.example.administrator.zhuangbishenqi.R;
 import com.example.administrator.zhuangbishenqi.base.BaseActivity;
+import com.mediav.ads.sdk.adcore.Mvad;
 import com.sevenheaven.segmentcontrol.SegmentControl;
+
+
 
 /**
  * Created by Administrator on 2016/9/22.
@@ -36,6 +39,8 @@ public class QqTransfer extends BaseActivity implements TextWatcher{
 
         btn_ture.setOnClickListener(this);
         img_breako.setOnClickListener(this);
+        final String adSpaceid = "aFub09x2i4";
+        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
         mSegmentControl.setOnSegmentControlClickListener(new SegmentControl.OnSegmentControlClickListener() {
             @Override
             public void onSegmentControlClick(int index) {
