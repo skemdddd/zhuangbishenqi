@@ -35,6 +35,11 @@
                 android:layout_toEndOf="@+id/img_break"/>
 
         </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adContainer">
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_marginEnd="10dp"

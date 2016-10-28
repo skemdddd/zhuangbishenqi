@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.administrator.zhuangbishenqi.R;
 import com.mediav.ads.sdk.adcore.Mvad;
+import com.mediav.ads.sdk.interfaces.IMvBannerAd;
 
 /**
  * Created by Administrator on 2016/9/8.
@@ -22,6 +24,7 @@ public class ZfbBalance extends WxBalance {
     EditText edt_money;
     Button btn_make_preview;
     TextView tv_title;
+    RelativeLayout adContainer;
 
 
     @Override
@@ -34,7 +37,8 @@ public class ZfbBalance extends WxBalance {
         btn_make_preview.setOnClickListener(this);
         img_break.setOnClickListener(this);
         final String adSpaceid = "aFub09x2i4";
-        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
+        IMvBannerAd bannerad = Mvad.showBanner(adContainer, this, adSpaceid, false);
+        bannerad.showAds(this);
 
     }
 
@@ -99,6 +103,7 @@ public class ZfbBalance extends WxBalance {
         edt_money= (EditText) findViewById(R.id.change_the_amount);
         btn_make_preview= (Button) findViewById(R.id.make_preview);
         tv_title= (TextView) findViewById(R.id.tv_title);
+        adContainer= (RelativeLayout) findViewById(R.id.adContainer);
 
     }
 

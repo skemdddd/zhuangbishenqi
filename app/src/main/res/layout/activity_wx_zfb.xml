@@ -26,6 +26,12 @@
             android:layout_toEndOf="@+id/ibtn_break"/>
 
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/adContainer">
+    </RelativeLayout>
     <LinearLayout
         android:id="@+id/LL_information"
         android:background="@color/colorWhiter"

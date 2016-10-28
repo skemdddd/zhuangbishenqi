@@ -59,7 +59,6 @@ public class WxchatAddPictures extends AddTextMessage {
         LL_pictures.setOnClickListener(this);
         tv_title.setText("增加背景");
 
-
     }
 
     @Override

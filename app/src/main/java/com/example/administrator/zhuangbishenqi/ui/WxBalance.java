@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.administrator.zhuangbishenqi.R;
 import com.example.administrator.zhuangbishenqi.base.BaseActivity;
 import com.example.administrator.zhuangbishenqi.widget.SwitchView;
 import com.mediav.ads.sdk.adcore.Mvad;
+import com.mediav.ads.sdk.interfaces.IMvBannerAd;
 import com.orhanobut.logger.Logger;
 
 /**
@@ -27,6 +29,7 @@ public class WxBalance extends BaseActivity implements SwitchView.OnStateChanged
     Button btn_make_preview;
     String type;
     TextView tv_title;
+    RelativeLayout adContainer;
 
 
     @Override
@@ -41,7 +44,8 @@ public class WxBalance extends BaseActivity implements SwitchView.OnStateChanged
         img_break.setOnClickListener(this);
         viewSwitch.setOnStateChangedListener(this);
         final String adSpaceid = "aFub09x2i4";
-        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
+        IMvBannerAd bannerad = Mvad.showBanner(adContainer,this, adSpaceid, false);
+        bannerad.showAds(this);
 
     }
 
@@ -108,6 +112,7 @@ public class WxBalance extends BaseActivity implements SwitchView.OnStateChanged
         btn_make_preview= (Button) findViewById(R.id.make_preview);
         viewSwitch= (SwitchView) findViewById(R.id.view_switch);
         tv_title= (TextView) findViewById(R.id.tv_title);
+        adContainer= (RelativeLayout) findViewById(R.id.adContainer);
 
     }
 

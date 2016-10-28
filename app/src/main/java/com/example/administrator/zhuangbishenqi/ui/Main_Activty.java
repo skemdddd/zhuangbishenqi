@@ -1,6 +1,7 @@
 package com.example.administrator.zhuangbishenqi.ui;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
@@ -29,7 +30,6 @@ public class Main_Activty  extends BaseActivity{
     ImageButton btn_artifact_transfer_accounts;
     ImageButton btn_artifact_star;
     ImageButton btn_artifact_kuso;
-    private IMvBannerAd bannerad = null;
     private RelativeLayout adContainer = null;
 
     @Override
@@ -49,7 +49,7 @@ public class Main_Activty  extends BaseActivity{
         btn_artifact_star.setOnClickListener(this);
         btn_delete.setOnClickListener(this);
         final String adSpaceid = "aFub09x2i4";
-        bannerad = Mvad.showBanner(adContainer, Main_Activty.this, adSpaceid, false);
+        IMvBannerAd bannerad = Mvad.showBanner(adContainer, Main_Activty.this, adSpaceid, false);
         bannerad.showAds(this);
     }
 
@@ -66,7 +66,6 @@ public class Main_Activty  extends BaseActivity{
                 startActivity(intent1);
                 break;
             case R.id.btn_delete:
-
                 if (Environment.getExternalStorageState().equals("mounted")) {
 //获取SD卡路径
                     File file = new File(WxSetChatChange.path);
@@ -100,9 +99,10 @@ public class Main_Activty  extends BaseActivity{
                 startActivity(intent3);
                 this.overridePendingTransition(R.anim.activity_open,0);
                 break;
-
-
-
+            case R.id.btn_artifact_star:
+                Uri uri = Uri.parse("http://zhushou.360.cn/detail/index/soft_id/3070125");
+                Intent intent4 = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent4);
         }
     }
 

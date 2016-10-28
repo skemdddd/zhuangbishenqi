@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import com.example.administrator.zhuangbishenqi.R;
 import com.example.administrator.zhuangbishenqi.base.BaseActivity;
 import com.mediav.ads.sdk.adcore.Mvad;
+import com.mediav.ads.sdk.interfaces.IMvBannerAd;
 import com.sevenheaven.segmentcontrol.SegmentControl;
 
 
@@ -29,6 +30,7 @@ public class QqTransfer extends BaseActivity implements TextWatcher{
     String typee;
     RelativeLayout RL_name;
     ImageButton img_breako;
+    RelativeLayout adContainer;
     @Override
     public void initWidget() {
         setContentView(R.layout.qq_transfer);
@@ -40,7 +42,8 @@ public class QqTransfer extends BaseActivity implements TextWatcher{
         btn_ture.setOnClickListener(this);
         img_breako.setOnClickListener(this);
         final String adSpaceid = "aFub09x2i4";
-        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
+        IMvBannerAd bannerad = Mvad.showBanner(adContainer, this, adSpaceid, false);
+        bannerad.showAds(this);
         mSegmentControl.setOnSegmentControlClickListener(new SegmentControl.OnSegmentControlClickListener() {
             @Override
             public void onSegmentControlClick(int index) {
@@ -93,6 +96,7 @@ public class QqTransfer extends BaseActivity implements TextWatcher{
         btn_ture= (Button) findViewById(R.id.btn_ture);
         RL_name= (RelativeLayout) findViewById(R.id.RL_name);
         img_breako= (ImageButton) findViewById(R.id.img_breako);
+        adContainer= (RelativeLayout) findViewById(R.id.adContainer);
     }
 
     @Override

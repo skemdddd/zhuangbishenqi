@@ -25,6 +25,7 @@ import com.example.administrator.zhuangbishenqi.entity.MyBitmapStore;
 import com.example.administrator.zhuangbishenqi.entity.Name;
 import com.example.administrator.zhuangbishenqi.widget.DateTimePickerDialog;
 import com.mediav.ads.sdk.adcore.Mvad;
+import com.mediav.ads.sdk.interfaces.IMvBannerAd;
 
 import java.text.SimpleDateFormat;
 
@@ -47,6 +48,7 @@ public class QqRedInformation  extends BaseActivity implements View.OnTouchListe
     TextView tv_title;//标题名字
     public  static TextView tv_time;//时间
     RelativeLayout RL_changeTime;
+    private RelativeLayout adContainer = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +62,8 @@ public class QqRedInformation  extends BaseActivity implements View.OnTouchListe
         String date = sDateFormat.format(new java.util.Date());
         tv_time.setText(date);
         final String adSpaceid = "aFub09x2i4";
-        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
-
+        IMvBannerAd bannerad = Mvad.showBanner(adContainer, this, adSpaceid, false);
+        bannerad.showAds(this);
     }
 
     @Override
@@ -140,6 +142,7 @@ public class QqRedInformation  extends BaseActivity implements View.OnTouchListe
         img_head1= (ImageView) findViewById(R.id.img_head1);
         tv_time= (TextView) findViewById(R.id.tv_time);
         RL_changeTime= (RelativeLayout) findViewById(R.id.RL_changeTime);
+        adContainer= (RelativeLayout) findViewById(R.id.adContainer);
 
     }
 

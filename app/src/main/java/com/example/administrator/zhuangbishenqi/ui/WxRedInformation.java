@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ import com.example.administrator.zhuangbishenqi.base.BaseActivity;
 import com.example.administrator.zhuangbishenqi.entity.MyBitmapStore;
 import com.example.administrator.zhuangbishenqi.entity.Name;
 import com.mediav.ads.sdk.adcore.Mvad;
+import com.mediav.ads.sdk.interfaces.IMvBannerAd;
 
 
 /**
@@ -43,6 +45,7 @@ public class WxRedInformation extends BaseActivity implements View.OnTouchListen
     EditText edt_wx_information;
     Name name;
     TextView tv_title;//标题名字
+    RelativeLayout adContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +54,8 @@ public class WxRedInformation extends BaseActivity implements View.OnTouchListen
         name =new Name();
         name.changeImgName(tv_name,img_head);
         final String adSpaceid = "aFub09x2i4";
-        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
+        IMvBannerAd bannerad = Mvad.showBanner(adContainer, this, adSpaceid, false);
+        bannerad.showAds(this);
     }
 
     @Override
@@ -99,6 +103,7 @@ public class WxRedInformation extends BaseActivity implements View.OnTouchListen
         img_head= (ImageView) findViewById(R.id.img_head);
         edt_wx_information= (EditText) findViewById(R.id.wx_information);
         tv_title= (TextView) findViewById(R.id.titlename);
+        adContainer= (RelativeLayout) findViewById(R.id.adContainer);
     }
 
     @Override

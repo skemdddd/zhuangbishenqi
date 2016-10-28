@@ -17,6 +17,7 @@ import com.example.administrator.zhuangbishenqi.base.BaseActivity;
 import com.example.administrator.zhuangbishenqi.entity.Name;
 import com.example.administrator.zhuangbishenqi.widget.AccointsTimePivkerDialog;
 import com.mediav.ads.sdk.adcore.Mvad;
+import com.mediav.ads.sdk.interfaces.IMvBannerAd;
 import com.sevenheaven.segmentcontrol.SegmentControl;
 
 import java.text.SimpleDateFormat;
@@ -42,6 +43,7 @@ public class WxTransfer extends BaseActivity implements View.OnTouchListener,Tex
     TextView tv_transferTime;
     String type ;
     String typee ;
+    RelativeLayout adContainer;
     @Override
     public void initWidget() {
         setContentView(R.layout.wx_transfer);
@@ -69,7 +71,8 @@ public class WxTransfer extends BaseActivity implements View.OnTouchListener,Tex
         edi_transfer.addTextChangedListener(this);
 
         final String adSpaceid = "aFub09x2i4";
-        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
+        IMvBannerAd bannerad = Mvad.showBanner(adContainer, this, adSpaceid, false);
+        bannerad.showAds(this);
         mSegmentControl.setOnSegmentControlClickListener(new SegmentControl.OnSegmentControlClickListener() {
             @Override
             public void onSegmentControlClick(int index) {
@@ -156,6 +159,7 @@ public class WxTransfer extends BaseActivity implements View.OnTouchListener,Tex
         edi_transfer= (EditText) findViewById(R.id.edi_transfer);
         tv_money_time= (TextView) findViewById(R.id.tv_money_time);
         tv_transferTime= (TextView) findViewById(R.id.tv_transferTime);
+        adContainer= (RelativeLayout) findViewById(R.id.adContainer);
 
     }
     @Override

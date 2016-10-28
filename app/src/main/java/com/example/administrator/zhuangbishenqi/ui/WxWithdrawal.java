@@ -17,6 +17,7 @@ import com.example.administrator.zhuangbishenqi.base.BaseActivity;
 import com.example.administrator.zhuangbishenqi.widget.BanckDialog;
 import com.example.administrator.zhuangbishenqi.widget.SwitchView;
 import com.mediav.ads.sdk.adcore.Mvad;
+import com.mediav.ads.sdk.interfaces.IMvBannerAd;
 import com.orhanobut.logger.Logger;
 
 /**
@@ -37,6 +38,7 @@ public class WxWithdrawal extends BaseActivity implements View.OnTouchListener,S
     EditText cadId;
     RelativeLayout RL_changebank;
     TextView change_the_amount;
+    RelativeLayout adContainer;
 
 
     @Override
@@ -56,7 +58,8 @@ public class WxWithdrawal extends BaseActivity implements View.OnTouchListener,S
         cadId.addTextChangedListener(this);
         edt_money.addTextChangedListener(this);
         final String adSpaceid = "aFub09x2i4";
-        Mvad.showFloatbannerAd(this,adSpaceid,false,Mvad.FLOAT_BANNER_SIZE.SIZE_DEFAULT,Mvad.FLOAT_LOCATION.BOTTOM);
+        IMvBannerAd bannerad = Mvad.showBanner(adContainer, this, adSpaceid, false);
+        bannerad.showAds(this);
 
     }
 
@@ -96,6 +99,7 @@ public class WxWithdrawal extends BaseActivity implements View.OnTouchListener,S
         banck= (TextView) findViewById(R.id.banck);
         cadId= (EditText) findViewById(R.id.cadId);
         change_the_amount= (TextView) findViewById(R.id.change_the_amount);
+        adContainer= (RelativeLayout) findViewById(R.id.adContainer);
 
     }
 
